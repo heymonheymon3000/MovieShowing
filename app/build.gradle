@@ -64,13 +64,13 @@ dependencies {
     // Timber
     def timber_version = "4.7.1"
     implementation "com.jakewharton.timber:timber:$timber_version"
-
-    implementation "androidx.test.espresso:espresso-idling-resource:3.3.0"
-
-
+    
     // Leak Canary
     def leak_canary_version = "2.0-alpha-3"
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary_version"
+
+    // Espresso idling resource
+    implementation "androidx.test.espresso:espresso-idling-resource:3.3.0"
 
     // Non-Instrumentation Test Dependencies
     testImplementation 'junit:junit:4.13.2'
@@ -84,11 +84,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     androidTestImplementation 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
     androidTestImplementation 'androidx.test:runner:1.3.0'
-    androidTestImplementation 'androidx.arch.core:core-testing:2.1.0'
-    androidTestImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.8'
     androidTestImplementation('com.schibsted.spain:barista:3.6.0') {
         exclude group: 'org.jetbrains.kotlin' // Only if you already use Kotlin in your project
     }
-
-
 }
