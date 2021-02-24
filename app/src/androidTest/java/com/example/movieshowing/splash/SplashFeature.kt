@@ -7,8 +7,7 @@ import com.schibsted.spain.barista.assertion.BaristaVisibilityAssertions.assertD
 import com.schibsted.spain.barista.assertion.BaristaVisibilityAssertions.assertNotExist
 import org.junit.Test
 
-class SplashFeature :
-    BaseSplashUITest() {
+class SplashFeature: BaseSplashUITest() {
 
     @Test
     fun displaysSplashScreen() {
@@ -18,6 +17,6 @@ class SplashFeature :
 
     @Test
     fun hideSplashScreen() {
-        assertNotExist(R.id.splashActivityRootLayout);
+        assertNotExist(R.id.splashActivityRootLayout)
     }
 }
