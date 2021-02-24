@@ -57,9 +57,9 @@ class SplashActivity :
         if(requestCode == resultCode) {
             val response = IdpResponse.fromResultIntent(data)
             if(resultCode == Activity.RESULT_OK) {
-                Timber.i("Successfully signed in user ${FirebaseAuth.getInstance().currentUser?.displayName}!")
+                Timber.d("Successfully signed in user ${FirebaseAuth.getInstance().currentUser?.displayName}!")
             } else {
-                Timber.i("Sign in unsuccessful ${response?.error?.errorCode}")
+                Timber.d("Sign in unsuccessful ${response?.error?.errorCode}")
             }
         }
     }

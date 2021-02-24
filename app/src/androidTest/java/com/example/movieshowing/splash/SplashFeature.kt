@@ -13,7 +13,6 @@ class SplashFeature :
     @Test
     fun displaysSplashScreen() {
         IdlingRegistry.getInstance().unregister(EspressoIdlingResource.countingIdlingResource)
-
         assertDisplayed(R.id.splashActivityRootLayout)
     }
 
