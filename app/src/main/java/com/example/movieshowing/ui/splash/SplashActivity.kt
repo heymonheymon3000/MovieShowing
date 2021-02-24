@@ -29,7 +29,9 @@ class SplashActivity :
 
     private fun launchSignInFlow() {
         CoroutineScope(Main).launch {
+
             delay(2000L)
+
             startActivityForResult(
                 AuthUI.getInstance()
                     .createSignInIntentBuilder()
@@ -46,8 +48,9 @@ class SplashActivity :
                             .setEmailButtonId(R.id.email_button)
                             .build()).build(),
                 resultCode, ActivityOptions.makeCustomAnimation(
-                this@SplashActivity,
-                android.R.anim.slide_in_left, android.R.anim.slide_out_right).toBundle())
+                    this@SplashActivity,
+                    android.R.anim.slide_in_left,
+                    android.R.anim.slide_out_right).toBundle())
             EspressoIdlingResource.decrement()
         }
     }
