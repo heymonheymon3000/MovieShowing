@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.movieshowing">
 
     <application
@@ -20,34 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ui.auth.AuthActivity"
-            android:theme="@style/LoginTheme" >
-        </activity>
-
-<!--        <activity-->
-<!--            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"-->
-<!--            tools:replace="android:launchMode"-->
-<!--            android:launchMode="standard">-->
-<!--        </activity>-->
-
-<!--        <service-->
-<!--            android:name=".service.auth.MovieFirebaseMessagingService"-->
-<!--            android:exported="false">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="com.google.firebase.MESSAGING_EVENT"/>-->
-<!--            </intent-filter>-->
-<!--        </service>-->
-
-<!--        <meta-data-->
-<!--            android:name="com.google.firebase.messaging.default_notification_icon"-->
-<!--            android:resource="@drawable/common_google_signin_btn_icon_dark"/>-->
-<!--        <meta-data-->
-<!--            android:name="com.google.firebase.messaging.default_notification_color"-->
-<!--            android:resource="@color/colorAccent"/>-->
-<!--        <meta-data-->
-<!--            android:name="com.google.firebase.messaging.default_notification_channel_id"-->
-<!--            android:value="@string/movie_refresh_notification_channel_id" />-->
     </application>
 
 </manifest>
