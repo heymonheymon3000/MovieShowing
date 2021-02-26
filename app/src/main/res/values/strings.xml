@@ -2,7 +2,6 @@
     <string name="app_name">MovieShowing</string>
 
 
-
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -37,20 +36,20 @@
     <string name="app_charging">App charging</string>
     <string name="app_not_charging">App not charging</string>
 
-<!--    <string name="title_activity_login">LoginActivity</string>-->
-<!--    <string name="prompt_email">Email</string>-->
-<!--    <string name="prompt_password">Password</string>-->
-<!--    <string name="action_sign_in">Sign in or register</string>-->
-<!--    <string name="action_sign_in_short">Sign in</string>-->
-<!--    <string name="welcome">"Welcome !"</string>-->
-<!--    <string name="invalid_username">Not a valid username</string>-->
-<!--    <string name="invalid_password">Password must be >5 characters</string>-->
-<!--    <string name="login_failed">"Login failed"</string>-->
-<!--    &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;-->
-<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
-<!--    <string name="login">Login</string>-->
-<!--    <string name="email_field">email</string>-->
-<!--    <string name="field_password">password</string>-->
-<!--    <string name="field_login">login</string>-->
-<!--    <string name="field_signup">signup</string>-->
+    <!--    <string name="title_activity_login">LoginActivity</string>-->
+    <!--    <string name="prompt_email">Email</string>-->
+    <!--    <string name="prompt_password">Password</string>-->
+    <!--    <string name="action_sign_in">Sign in or register</string>-->
+    <!--    <string name="action_sign_in_short">Sign in</string>-->
+    <!--    <string name="welcome">"Welcome !"</string>-->
+    <!--    <string name="invalid_username">Not a valid username</string>-->
+    <!--    <string name="invalid_password">Password must be >5 characters</string>-->
+    <!--    <string name="login_failed">"Login failed"</string>-->
+    <!--    &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;-->
+    <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <!--    <string name="login">Login</string>-->
+    <!--    <string name="email_field">email</string>-->
+    <!--    <string name="field_password">password</string>-->
+    <!--    <string name="field_login">login</string>-->
+    <!--    <string name="field_signup">signup</string>-->
 </resources>

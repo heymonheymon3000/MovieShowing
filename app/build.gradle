@@ -47,10 +47,19 @@ android {
 
 dependencies {
     implementation 'androidx.core:core-ktx:1.3.2'
-
     implementation 'androidx.appcompat:appcompat:1.2.0'
-
     implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // Retrofit
+    def retrofit_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    // Navigation
+    def navigation_version = "2.3.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
 
     // Constraint layout
     def constraint_layout_version = "2.0.4"
@@ -78,7 +87,7 @@ dependencies {
     def leak_canary_version = "2.0-alpha-3"
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary_version"
 
-    // Espresso idling resource
+    // Espresso idling resource - used for testing
     implementation "androidx.test.espresso:espresso-idling-resource:3.3.0"
 
     // Non-Instrumentation Test Dependencies
