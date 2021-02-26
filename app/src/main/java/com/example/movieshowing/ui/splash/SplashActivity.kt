@@ -11,46 +11,52 @@ import com.firebase.ui.auth.AuthMethodPickerLayout
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.Main
 import timber.log.Timber
 
-class SplashActivity :
-        BaseActivity() {
+@AndroidEntryPoint
+class SplashActivity: BaseActivity() {
 
     private val resultCode = 1001
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        EspressoIdlingResource.increment()
         launchSignInFlow()
     }
 
     private fun launchSignInFlow() {
-        CoroutineScope(Main).launch {
+        EspressoIdlingResource.increment()
 
-            delay(2000L)
+        CoroutineScope(Main).launch {
+            delay(1000L)
+
+            val providers = arrayListOf(
+                AuthUI.IdpConfig.EmailBuilder().build(),
+                AuthUI.IdpConfig.GoogleBuilder().build())
+
+            val authPickerLayout =  AuthMethodPickerLayout
+                .Builder(R.layout.layout_login)
+                .setGoogleButtonId(R.id.google_button)
+                .setEmailButtonId(R.id.email_button)
+                .build()
+
+            val animationOptions  = ActivityOptions.makeCustomAnimation(
+                this@SplashActivity,
+                android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right)
 
             startActivityForResult(
                 AuthUI.getInstance()
                     .createSignInIntentBuilder()
-                    .setAvailableProviders(
-                        arrayListOf(
-                            AuthUI.IdpConfig.GoogleBuilder().build(),
-                            AuthUI.IdpConfig.EmailBuilder().build()))
-                    .setIsSmartLockEnabled(true)
+                    .setAvailableProviders(providers)
+                    .setIsSmartLockEnabled(false)
                     .setTheme(R.style.LoginTheme)
-                    .setAuthMethodPickerLayout(
-                        AuthMethodPickerLayout
-                            .Builder(R.layout.layout_login)
-                            .setGoogleButtonId(R.id.google_button)
-                            .setEmailButtonId(R.id.email_button)
-                            .build()).build(),
-                resultCode, ActivityOptions.makeCustomAnimation(
-                    this@SplashActivity,
-                    android.R.anim.slide_in_left,
-                    android.R.anim.slide_out_right).toBundle())
+                    .setAuthMethodPickerLayout(authPickerLayout)
+                    .build(), resultCode, animationOptions.toBundle())
+
             EspressoIdlingResource.decrement()
         }
     }

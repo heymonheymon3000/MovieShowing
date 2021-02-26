@@ -1,8 +1,10 @@
 package com.example.movieshowing
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
+@HiltAndroidApp
 class MovieShowingApplication : Application() {
 
     override fun onCreate() {
